@@ -520,10 +520,11 @@ def get_session(session_id: str):
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:5173",
-    "https://your-decisionecho.vercel.app"
-],
-    allow_credentials=False,
+        "https://decision-echo.vercel.app",
+        "http://localhost:5173",
+        "http://192.168.56.1:5173"
+    ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
